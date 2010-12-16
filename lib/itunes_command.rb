@@ -50,7 +50,7 @@ module Strongspace::Command
         exit(0)
       end
 
-      rsync_command = "#{rsync_binary} -e 'ssh -oServerAliveInterval=3 -oServerAliveCountMax=1' --delete --exclude='Album Artwork' --exclude='.DS_Store' -avr #{@local_library_path}/ #{strongspace.username}@#{strongspace.username}.strongspace.com:#{@strongspace_path}/"
+      rsync_command = "#{rsync_binary} -e 'ssh -oServerAliveInterval=3 -oServerAliveCountMax=1' --delete --exclude 'Album Artwork' --exclude '.DS_Store' -avr #{@local_library_path}/ #{strongspace.username}@#{strongspace.username}.strongspace.com:#{@strongspace_path}/"
 
       restart_wait = 10
       num_failures = 0
