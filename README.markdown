@@ -1,8 +1,9 @@
 Strongspace iTunes Backup plugin
 ================================
 
-This is a plugin for the [Strongspace gem](https://github.com/expandrive/strongspace-ruby) to automatically backup your iTunes Library to Strongspace. Currently it only works on Mac but will support windows soon enough.
+This is a plugin for the [Strongspace gem](https://github.com/expandrive/strongspace-ruby) to automatically backup your iTunes Library to Strongspace. Currently it only works on Mac but will support windows soon enough. It's a branch off of expandrive's [iTunes backup plugin](https://github.com/expandrive/strongspace-itunes).
 
+Currently, the only modification is to exclude Album Artwork and .DS_Store files from the backup, assuming I did this correctly.
 
 Installation
 ------------
@@ -11,7 +12,7 @@ Upgrade/Install the Strongspace gem to v0.0.9 or newer:
     `sudo gem install strongspace`
 
 Install the Strongspace iTunes plugin
-    `strongspace plugins:install git://github.com/expandrive/strongspace-itunes.git`
+    `strongspace plugins:install git://github.com/fitzage/strongspace-itunes.git`
 
 Now when you run `strongspace help` you will see these extra commands.
 
@@ -47,10 +48,5 @@ This configures launchd to run the iTunes backup every minute - first checking t
 Logs of the scheduled backup tasks can be viewed by running
     `strongspace itunes:log`
 
-
-Feedback
---------
-
-This is our first plugin and is under active development. Shoot an email to jmancuso@expandrive.com with any comments or suggestions. If you want to make an awesome fork an have us merge some great changes, we'd love that too.
 
 
